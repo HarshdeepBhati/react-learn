@@ -1,3 +1,38 @@
-#heading {
-    color: red;
+*{
+    box-sizing: border-box;
+}
+*::before{
+    box-sizing: border-box;
+}
+*::after{
+    box-sizing: border-box;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50px;
+    background-color: orange;
+}
+
+.logo-container {
+    display: flex;
+    margin-left: 50px;
+}
+.logo {
+    margin: 10px;
+    width: 60px;
+}
+.nav-items {
+    padding: 0px 100px;
+}
+.nav-items > ul {
+    display: flex;
+    list-style-type: none;
+}
+.nav-items > ul > li {
+    margin: 10px;
+    padding: 10px;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
 }

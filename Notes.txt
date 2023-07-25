@@ -1,0 +1,91 @@
+building from scratch...
+npm is a node package manager but it doesn't stands for node package manager- fact
+package.json is configuration for npm
+packages and dependecies has same meaning
+most important package - bundler(eg. webpack,parcel,wheat)
+we are using parcel - it is a beast
+
+dev dependecies - required for development phase.
+normal dependecies - can be used in development and as well as or prod server
+
+transitive dependecies - a dependecies installed for a dependecy
+
+npm is to install
+we have npx means executing a package
+
+CDN not a good way: make a network call, having it in node modules is better.
+
+PARCEL:
+HMR = Hot module replacement.
+Parcel - File watching algorithm which is written in C++.
+faster builds - caching.
+Image Optimization
+Minification
+Bundling
+Compressing
+Consistent Hashing
+Remove unused code
+
+JSX is not html
+JSX - Javascript XML - it is not html inside js : it is html like syntax like XML.
+JSX is transpiled before it reaches to js engine ---> PARCEL ----> Babel here is main character
+
+If we write JSX in multiple line we have to use paranthesis
+
+Components: 
+
+// React Element
+
+const heading = React.createElement(
+  "h1",
+  { id: "heading" },
+  "Namaste React 🚀"
+);
+console.log(heading);
+//JSX - Javascript XML - it is not html inside js
+
+//below is the react element
+const jsxHeading = <h1 id="heading">This is a React Element</h1>; // it is converted to React.element //Babel is converter
+
+//React Component
+//React Functional Component
+
+const Title = () => (
+  <div>
+    <h1 id="head">{jsxHeading}Title - This is a React Functional Component</h1>
+  </div>
+); // we can use return here
+
+const number = 1000;
+// Component Composition
+const HeadingComponent = () => {
+  return (
+    <div id="container">
+      <Title />
+      <h1>Namaste React Functional Component</h1>
+    </div>
+  );
+};
+
+Types:
+Class based Components - OLD Way - Will learn later
+Functional components - NEW Way
+
+Feature: you can add {} in JSX code and execte any Javascript code inside {}.
+
+
+Food App:
+
+Components: 
+1. Header
+    - Logo
+    - Nav Items
+2. Body
+    - Search
+    - Restaurant Container
+        - Restaurant Card
+3. Footer
+    - Copyright
+    - link
+    - Address
+    - Contact

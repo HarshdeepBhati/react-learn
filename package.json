@@ -1,0 +1,31 @@
+{
+  "name": "react-course",
+  "version": "1.0.0",
+  "description": "namaste react course",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel buld index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarshdeepBhati/react-learn.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Harshdeep",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarshdeepBhati/react-learn/issues"
+  },
+  "homepage": "https://github.com/HarshdeepBhati/react-learn#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
