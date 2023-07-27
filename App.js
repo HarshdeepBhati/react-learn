@@ -22,10 +22,42 @@ const Header = () => {
   );
 };
 
+const RestaurantCard = (props) => {
+  const { resName, cuisine } = props; // this is destructuring, we can use data like props.resName ans props.cuisine in template;
+  return (
+    <div className="res-card">
+      <img
+        className="res-logo"
+        src="https://www.italymagazine.com/sites/default/files/styles/800xauto/public/recipe/pizza-margherita-cottura_0.jpg?itok=2Jj0BXDI"
+      ></img>
+      <h3>{resName}</h3>
+      <h4>{cuisine}</h4>
+      <h4>4.4 stars</h4>
+      <h4>38 Minutes</h4>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="res-container">
+        <RestaurantCard
+          resName="Meghna Foods"
+          cuisine="Biriyani, North-Indian"
+        />
+        <RestaurantCard resName="KFC" cuisine="Burger, Fast Food" />
+      </div>
+    </div>
+  );
+};
+
 const AppLayout = () => {
   return (
     <div className="app">
       <Header></Header>
+      <Body></Body>
     </div>
   );
 };

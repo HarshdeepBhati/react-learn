@@ -84,8 +84,18 @@ Components:
     - Search
     - Restaurant Container
         - Restaurant Card
+            - img
+            - Name of Restaurant
+            - Star Rating
+            - Cuisine
+            - Time
 3. Footer
     - Copyright
     - link
     - Address
     - Contact
+
+
+Props to a component = arguments to a function;
+
+config driven UI - Website driven by data from backend API;
