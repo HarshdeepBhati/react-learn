@@ -99,3 +99,29 @@ Components:
 Props to a component = arguments to a function;
 
 config driven UI - Website driven by data from backend API;
+
+always give a key={uniqueKey} if we loop through the same component that we need to use multiple times.
+eg: {resList.map((restaurant) => (
+          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+        ))}
+
+reason: if we give a key react will only render that perticular component, it will not render all components again and again.
+
+React says that never use indexes as the keys
+
+Hooks ----- 
+A Hook Is Normal Javascript variable given by react developers with some logic written behing the scenes.
+2 very important Hooks
+-useState() --- 80% Used - Superpowerful State Variables
+  -- whenever a state variable updates it re-renders the component
+-useEffect() ---- 15%
+
+Why react is faster --> 
+
+Efficient DOM Manipulation by
+
+reconciliation algorithm -> (react fibre(React 16 - new algo)) ----> React Virtual DOM is a representation of actual DOM (React Create Element) ---> just a JS object.
+
+Diff Algo: Before Click --> 7 cards : after Click ---> 3 cards ---> It finds the difference between old Virtual DOM and new Virtual DOM and
+          It converts the Virtual DOM into actual DOM in 1 render cycle.
+ 
