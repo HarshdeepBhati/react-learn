@@ -113,8 +113,15 @@ Hooks -----
 A Hook Is Normal Javascript variable given by react developers with some logic written behing the scenes.
 2 very important Hooks
 -useState() --- 80% Used - Superpowerful State Variables
-  -- whenever a state variable updates it re-renders the component
+  -- whenever a state variable updates it re-renders the component.
+  Best Practice for use State
+  -- Never use useState outside if your component.  
+  -- call hooks on top in the function.
+  -- never create a useState inside in conditions of if else or for loops and functions.
 -useEffect() ---- 15%
+  -- called after each render if no dependency array is present.
+  -- if dependecy array is empty [] - use effect is called on initial render - just once.
+  -- if depecndeny array has value [btnReact] - called everytime when btnReact will be updated.
 
 Why react is faster --> 
 
@@ -125,3 +132,6 @@ reconciliation algorithm -> (react fibre(React 16 - new algo)) ----> React Virtu
 Diff Algo: Before Click --> 7 cards : after Click ---> 3 cards ---> It finds the difference between old Virtual DOM and new Virtual DOM and
           It converts the Virtual DOM into actual DOM in 1 render cycle.
  
+
+
+whenever a state variable updates react re-renders the whole component.
