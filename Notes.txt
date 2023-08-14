@@ -135,3 +135,10 @@ Diff Algo: Before Click --> 7 cards : after Click ---> 3 cards ---> It finds the
 
 
 whenever a state variable updates react re-renders the whole component.
+
+Class based component: Life cycle: constructor then render then componentDidMount
+useCase: componentDidMount is used to make API calls because when component is completely mounted then only make a call.
+
+optimizing:::::::
+custom hooks - to make code readable, modular and easy to test.
+chunking/code splitting/lazy loading/dynamic bundling/on demand loading/dynamic import - dividing the single js file bundled by parcel, to smaller chunks.

@@ -2,7 +2,7 @@ import { CDN_URL } from "../utils/constants";
 const RestaurantCard = (props) => {
   const { resData } = props; // this is destructuring, we can use data like props.resName ans props.cuisine in template;
 
-  const { cloudinaryImageId, name, cuisines, costForTwo, avgRating } =
+  const { cloudinaryImageId, name, cuisines, costForTwo, avgRating, id } =
     resData?.info;
   return (
     <div className="res-card">
