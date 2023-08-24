@@ -142,3 +142,16 @@ useCase: componentDidMount is used to make API calls because when component is c
 optimizing:::::::
 custom hooks - to make code readable, modular and easy to test.
 chunking/code splitting/lazy loading/dynamic bundling/on demand loading/dynamic import - dividing the single js file bundled by parcel, to smaller chunks.
+
+Higher Order Component -> Takes a component and returns a component.
+
+status lifting up -- accordian example
+
+props drilling - passing data from parent->child->children component // this is not a good way
+solutions is to create some global data that is called React Context
+
+React Context: Solves problem of props drilling -> build small apps.
+
+Redux(external library) => no need to use context -> large scale apps.
+
+Redux store

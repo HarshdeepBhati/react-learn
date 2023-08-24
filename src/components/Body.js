@@ -1,9 +1,10 @@
-import RestaurantCard from "./RestaurantCard";
-import { useState } from "react";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
+import { useState, useContext } from "react";
 import { useEffect } from "react";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 const Body = () => {
   //Local State Variable - Super Powerful Variable  ----> Hooks ->
   //Use State Hook
@@ -12,6 +13,8 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   //Normal Variable
   // listOfRestarants = resList;
+  const RestaurantCardVeg = withPromotedLabel(RestaurantCard);
+  const { setUserInfo, loggedInUSer } = useContext(UserContext);
 
   useEffect(() => {
     fetchData(); //This is called after a component renders
@@ -81,6 +84,13 @@ const Body = () => {
           >
             All Restaurants
           </button>
+          <label>User Name: </label>
+          <input
+            className="border border-black px-4 py-1 mx-2"
+            type="text"
+            value={loggedInUSer}
+            onChange={(e) => setUserInfo(e.target.value)}
+          ></input>
         </div>
       </div>
       <div className="flex flex-wrap p-2">
@@ -93,7 +103,11 @@ const Body = () => {
             to={`/restaurants/${restaurant?.info?.id}`}
             key={restaurant.info.id}
           >
-            <RestaurantCard resData={restaurant} />
+            {restaurant.info.veg ? (
+              <RestaurantCardVeg resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
