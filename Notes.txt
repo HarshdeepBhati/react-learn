@@ -152,6 +152,11 @@ solutions is to create some global data that is called React Context
 
 React Context: Solves problem of props drilling -> build small apps.
 
-Redux(external library) => no need to use context -> large scale apps.
+Redux Tool Kit(external state management library) => no need to use context -> large scale apps.
 
-Redux store
+Redux store - It is like a big javascript object with large data - Read right data that is kept inside a central place
+            - Slices - logical parititions eg: cart(whole data of cart), user, theme.
+            - Write - Add button -> It dispaches an action -> calls a function(reducer) -> updates the slice(data) of redux store.
+            - Read - Slice -> Selector(subscribed to the store) -> modify react component.
+            
+Best Practice Redux - just subscribe to the small portion of the store performance will be increased. 
